@@ -24,4 +24,4 @@ TECHNOLOGY STACK:
 
 -> Programming Language: Java
 
--> Database: MySQL (via JDBC for database connectivity)
+-> Database: MySQL (username: "root", password: "").
