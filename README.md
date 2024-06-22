@@ -23,4 +23,5 @@ ADMIN FEATURES:
 TECHNOLOGY STACK:
 
 -> Programming Language: Java
+
 -> Database: MySQL (via JDBC for database connectivity)
