@@ -1,7 +1,5 @@
 import java.util.*;
 import java.sql.*;
-
-import java.util.*;
 import java.util.Date;
 
 class Bike {
@@ -75,7 +73,6 @@ class Rental {
         return days;
     }
 }
-
 
 class BikeRentalSystem {
     private BikeAccess bikeAccess = new BikeAccess();
@@ -157,7 +154,8 @@ class BikeRentalSystem {
                 Rental rental = new Rental(bike, newCustomer, rentalDays);
                 Timestamp rentalDate = new Timestamp(new Date().getTime());
                 bikeAccess.addCustomer(newCustomer.getCustomerId(), newCustomer.getName());
-                bikeAccess.rentBike(newCustomer.getCustomerId(), newCustomer.getName(), bike.getBikeId(), bike.getBrand(), bike.getModel(), rentalDays, totalPrice, rentalDate);
+                bikeAccess.rentBike(newCustomer.getCustomerId(), newCustomer.getName(), bike.getBikeId(),
+                        bike.getBrand(), bike.getModel(), rentalDays, totalPrice, rentalDate);
                 System.out.println("\nBike rented successfully.");
             } else {
                 System.out.println("\nRental canceled.");
@@ -178,7 +176,7 @@ class BikeRentalSystem {
             String customerName = bikeAccess.returnBike(bikeId);
             if (customerName != null) {
                 Timestamp returnTime = new Timestamp(new Date().getTime());
-//                bikeAccess.updateReturn(returnTime,bikeId);
+                // bikeAccess.updateReturn(returnTime,bikeId);
 
                 System.out.println("Bike was returned successfully by " + customerName);
             } else {
@@ -200,4 +198,3 @@ public class Main {
         }
     }
 }
-
